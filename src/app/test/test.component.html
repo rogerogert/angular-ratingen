@@ -37,7 +37,7 @@
 
   <button class="btn-primary" (click)="sendName()">Send Name</button>
   <br />
-  <app-test-child></app-test-child>
+  <app-test-child [fullName]="firstName + ' ' + lastName"></app-test-child>
 
   <div style="border: 1px solid gray" *ngFor="let name of names">
     {{ name }}
