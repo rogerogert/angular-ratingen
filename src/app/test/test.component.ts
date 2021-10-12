@@ -10,6 +10,7 @@ export class TestComponent implements OnInit {
   public firstName = '';
   public lastName = '';
   public isVisible = false;
+  public names = ['Rogerio', 'Jari', 'Ingo', 'Ravi', 'Emrah', 'Eric'];
 
   public inputEventTrigger(): void {
     alert("funciona!");
@@ -20,10 +21,11 @@ export class TestComponent implements OnInit {
     console.log(this.lastName);
   }
   constructor() {
-    this.isVisible = environment.showMyTestSection
+
   }
 
   ngOnInit() {
+    this.isVisible = environment.showMyTestSection
   }
 
 }

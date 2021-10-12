@@ -1,6 +1,6 @@
 <br />
 <br />
-<div [ngStyle]="{ visibility: isVisible ? 'visible' : 'hidden' }">
+<div *ngIf="isVisible">
   <h1>Demo below</h1>
   <form>
     <div class="form-group">
@@ -35,4 +35,8 @@
       />
     </div>
   </form>
+
+  <div style="border: 1px solid gray" *ngFor="let name of names">
+    {{ name }}
+  </div>
 </div>
