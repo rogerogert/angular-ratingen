@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
 export class AppComponent implements OnInit {
   title = 'recipe-book';
   public showTestSection: boolean = false;
+  public loadedSection = 'recipes-section';
 
   ngOnInit(): void {
     this.showTestSection = environment.showMyTestSection;
