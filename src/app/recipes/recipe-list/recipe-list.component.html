@@ -6,15 +6,10 @@
 <hr />
 <div class="row">
   <div class="col-md-12">
-    <a href="" class="list-group-item clearfix">
-      <div class="pull-left">
-        <h4 class="list-group-item-heading">Heading</h4>
-        <p class="list-group-item-text">Here is the text</p>
-      </div>
-      <span class="pull-right">
-        <img src="#" alt="" />
-      </span>
-    </a>
-    <app-recipe-item></app-recipe-item>
+    <app-recipe-item
+      *ngFor="let recipe of recipes"
+      [recipeItem]="recipe"
+      (click)="selectRecipe(recipe)"
+    ></app-recipe-item>
   </div>
 </div>
