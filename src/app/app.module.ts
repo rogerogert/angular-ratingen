@@ -11,6 +11,7 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { TestComponent } from './test/test.component';
 import { FormsModule } from '@angular/forms';
+import { TestChildComponent } from './test/test-child/test-child.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     RecipeListComponent,
     RecipeItemComponent,
     RecipeDetailComponent,
-    TestComponent
+    TestComponent,
+    TestChildComponent
   ],
   imports: [
     BrowserModule, FormsModule

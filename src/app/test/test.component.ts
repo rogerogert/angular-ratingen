@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -9,6 +9,8 @@ import { environment } from 'src/environments/environment';
 export class TestComponent implements OnInit {
   public firstName = '';
   public lastName = '';
+  @ViewChild('firstNameInput') public firstNameInput!: ElementRef<HTMLInputElement>;
+  @ViewChild('lastNameInput') public lastNameInput!: ElementRef<HTMLInputElement>;
   public isVisible = false;
   public names = ['Rogerio', 'Jari', 'Ingo', 'Ravi', 'Emrah', 'Eric'];
 
@@ -26,6 +28,13 @@ export class TestComponent implements OnInit {
 
   ngOnInit() {
     this.isVisible = environment.showMyTestSection
+  }
+
+  public sendName(): void {
+    this.firstName = this.firstNameInput.nativeElement.value;
+    this.lastName = this.lastNameInput.nativeElement.value;
+    console.log("First Name: " + this.firstName);
+    console.log("Last Name: " + this.lastName);
   }
 
 }

@@ -13,13 +13,13 @@
         (input)="inputValue($event)"
       /> -->
 
-      <label for="name">First Name</label>
+      <label for="firstName">First Name</label>
       <input
         type="text"
-        id="name"
+        id="firstName"
         class="form-control"
-        name="name"
-        [(ngModel)]="firstName"
+        name="firstName"
+        #firstNameInput
       />
     </div>
 
@@ -30,11 +30,14 @@
         id="lastName"
         name="lastName"
         class="form-control"
-        [(ngModel)]="lastName"
-        (input)="inputValue($event)"
+        #lastNameInput
       />
     </div>
   </form>
+
+  <button class="btn-primary" (click)="sendName()">Send Name</button>
+  <br />
+  <app-test-child></app-test-child>
 
   <div style="border: 1px solid gray" *ngFor="let name of names">
     {{ name }}
