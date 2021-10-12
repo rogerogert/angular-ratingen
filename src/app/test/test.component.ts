@@ -6,14 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-  public name = '';
+  public firstName = '';
 
   public inputEventTrigger(): void {
     alert("funciona!");
   }
 
   public inputValue(event: Event): void {
-    this.name = (event.target as HTMLInputElement).value;
+    this.firstName = (event.target as HTMLInputElement).value;
   }
   constructor() { }
 
