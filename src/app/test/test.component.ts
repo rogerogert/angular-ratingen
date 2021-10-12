@@ -13,6 +13,7 @@ export class TestComponent implements OnInit {
   @ViewChild('lastNameInput') public lastNameInput!: ElementRef<HTMLInputElement>;
   public isVisible = false;
   public names = ['Rogerio', 'Jari', 'Ingo', 'Ravi', 'Emrah', 'Eric'];
+  public inputFromChild = '';
 
   public inputEventTrigger(): void {
     alert("funciona!");

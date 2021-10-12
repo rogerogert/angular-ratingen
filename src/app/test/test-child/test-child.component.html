@@ -1,1 +1,17 @@
 <p>The Full Name is {{ fullName }}</p>
+
+<br />
+<h2>This is Child Input</h2>
+<div class="form-group">
+  <label for="childInput">Child Input</label>
+  <input
+    type="text"
+    id="childInput"
+    name="childInput"
+    class="form-control"
+    [(ngModel)]="childInputValue"
+  />
+</div>
+<br />
+<button class="btn-primary" (click)="sendChild()">Child Input</button>
+<br />
