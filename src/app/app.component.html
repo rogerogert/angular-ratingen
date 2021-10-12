@@ -1,10 +1,10 @@
-<app-header></app-header>
+<app-header (sectionChanged)="loadedSection = $event"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
       <app-recipes *ngIf="loadedSection === 'recipes-section'"></app-recipes>
       <app-shopping-list
-        *ngIf="loadedSection === 'shopping-section'"
+        *ngIf="loadedSection === 'shopping-list-section'"
       ></app-shopping-list>
       <app-test *ngIf="showTestSection"></app-test>
     </div>
