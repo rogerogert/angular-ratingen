@@ -1,8 +1,33 @@
 <div class="row">
+  <div class="col-md-12">
+    <button
+      *ngIf="!isNewRecipeOpened"
+      class="btn btn-success"
+      (click)="openNewRecipe()"
+    >
+      New Recipe
+    </button>
+    <button
+      *ngIf="isNewRecipeOpened"
+      class="btn btn-warning"
+      (click)="openNewRecipe()"
+    >
+      Return
+    </button>
+  </div>
+</div>
+
+<div class="row" *ngIf="!isNewRecipeOpened">
   <div class="col-md-5">
     <app-recipe-list (recipeSelected)="setRecipe($event)"></app-recipe-list>
   </div>
   <div class="col-md-7">
     <app-recipe-detail></app-recipe-detail>
+  </div>
+</div>
+
+<div class="row" *ngIf="isNewRecipeOpened">
+  <div class="col-md-5">
+    <app-recipe-add></app-recipe-add>
   </div>
 </div>

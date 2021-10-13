@@ -9,11 +9,20 @@ import { Recipe } from './recipe.model';
 export class RecipesComponent {
 
   public recipe!: Recipe;
+  public isNewRecipeOpened = false;
 
   constructor() { }
 
   public setRecipe(recipe: Recipe) {
     this.recipe = recipe;
+  }
+
+  public openNewRecipe() {
+    if (this.isNewRecipeOpened) {
+      this.isNewRecipeOpened = false;
+    } else {
+      this.isNewRecipeOpened = true;
+    }
   }
 
 }

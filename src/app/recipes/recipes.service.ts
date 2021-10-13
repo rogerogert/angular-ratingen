@@ -7,6 +7,8 @@ import { Recipe } from './recipe.model';
 })
 export class RecipesService {
   public recipeSelected = new Subject<Recipe>();
+  public recipeAdded = new Subject<Recipe[]>();
+
 
   private recipes: Recipe[] = [
     {
@@ -23,6 +25,11 @@ export class RecipesService {
 
   public getRecipes(): Recipe[] {
     return this.recipes.slice();
+  }
+
+  public addRecipe(recipe: Recipe) {
+    this.recipes.push(recipe);
+    this.recipeAdded.next(this.recipes.slice())
   }
 
   constructor() { }

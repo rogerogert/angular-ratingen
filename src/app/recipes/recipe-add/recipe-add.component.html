@@ -1,0 +1,26 @@
+<h1>Add Recipe</h1>
+<form>
+  <div class="form-group">
+    <label for="recipeName">Recipe Name</label>
+    <input
+      type="text"
+      id="recipeName"
+      class="form-control"
+      name="recipeName"
+      [(ngModel)]="recipeName"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="recipeDesc">Recipe Description</label>
+    <input
+      type="text"
+      id="recipeDesc"
+      name="recipeDesc"
+      class="form-control"
+      [(ngModel)]="recipeDesc"
+    />
+  </div>
+</form>
+
+<button class="btn-primary" (click)="saveRecipe()">Save</button>
