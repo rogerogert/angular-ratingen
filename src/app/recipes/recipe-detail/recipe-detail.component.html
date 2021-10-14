@@ -1,43 +1,45 @@
-<div class="row">
-  <div class="col-xs-12">
-    <img
-      [src]="recipeInput.imagePath"
-      alt="recipeInput.description"
-      class="img-responsive"
-      style="max-height: 350px"
-    />
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    <h1>{{ recipeInput.name }}</h1>
-    <h3>{{ recipeInput.description }}</h3>
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    <div class="btn-group">
-      <button
-        type="button"
-        class="btn btn-primary dropdown-toggle"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false"
-      >
-        Manage Recipe
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">To Shopping List</a></li>
-        <li><a class="dropdown-item" href="#">Delete Recipe</a></li>
-      </ul>
+<ng-container *ngIf="recipeInput; else noRecipe">
+  <div class="row">
+    <div class="col-xs-12">
+      <img
+        [src]="recipeInput.imagePath"
+        alt="recipeInput.description"
+        class="img-responsive"
+        style="max-height: 350px"
+      />
     </div>
   </div>
-</div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>{{ recipeInput.name }}</h1>
+      <h3>{{ recipeInput.description }}</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="btn-group">
+        <button
+          type="button"
+          class="btn btn-primary dropdown-toggle"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Manage Recipe
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">To Shopping List</a></li>
+          <li><a class="dropdown-item" href="#">Delete Recipe</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-<div class="row">
-  <div class="col-xs-12">Ingredients</div>
-</div>
+  <div class="row">
+    <div class="col-xs-12">Ingredients</div>
+  </div>
+</ng-container>
 
-<ng-template #name>
+<ng-template #noRecipe>
   <h2>Please select a recipe!</h2>
 </ng-template>

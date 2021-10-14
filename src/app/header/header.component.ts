@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +9,14 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class HeaderComponent {
   @Output() sectionChanged = new EventEmitter<string>();
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  public switchPage(section: string): void {
-    this.sectionChanged.emit(section);
+  // public switchPage(section: string): void {
+  //   this.sectionChanged.emit(section);
+  // }
+
+  public switchToShoppingList(): void {
+    this.router.navigate(['shopping-list'])
   }
 
 }
