@@ -13,21 +13,7 @@ import { TestComponent } from './test/test.component';
 import { FormsModule } from '@angular/forms';
 import { TestChildComponent } from './test/test-child/test-child.component';
 import { RecipeAddComponent } from './recipes/recipe-add/recipe-add.component';
-import { RouterModule, Routes } from '@angular/router';
-
-const appRoutes: Routes = [
-  {
-    path: 'recipes',
-    component: RecipesComponent
-
-  },
-  {
-    path: 'shopping-list',
-    component: ShoppingListComponent,
-
-  },
-  { path: '', redirectTo: '/recipes', pathMatch: 'full' }
-]
+import { AppRoutingModule } from './app.routing.module';
 
 
 @NgModule({
@@ -45,7 +31,7 @@ const appRoutes: Routes = [
     RecipeAddComponent
   ],
   imports: [
-    BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)
+    BrowserModule, FormsModule, AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

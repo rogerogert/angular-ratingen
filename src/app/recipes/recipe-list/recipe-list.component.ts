@@ -11,7 +11,6 @@ export class RecipeListComponent implements OnInit {
   @Output() recipeSelected = new EventEmitter<Recipe>();
   public recipes: Recipe[] = []
 
-
   constructor(private recipeService: RecipesService) { }
 
   ngOnInit(): void {

@@ -17,17 +17,17 @@
   </div>
 </div>
 
-<div class="row" *ngIf="!isNewRecipeOpened">
+<div class="row">
   <div class="col-md-5">
     <app-recipe-list (recipeSelected)="setRecipe($event)"></app-recipe-list>
   </div>
   <div class="col-md-7">
-    <app-recipe-detail></app-recipe-detail>
+    <router-outlet></router-outlet>
   </div>
 </div>
 
-<div class="row" *ngIf="isNewRecipeOpened">
+<!-- <div class="row" *ngIf="isNewRecipeOpened">
   <div class="col-md-5">
     <app-recipe-add></app-recipe-add>
   </div>
-</div>
+</div> -->
