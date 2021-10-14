@@ -17,19 +17,27 @@
 <div class="row">
   <div class="col-xs-12">
     <div class="btn-group">
-      <button type="button" class="btn btn-primary dropdown-toggle">
-        Manage Recipe <span class="caret"></span>
+      <button
+        type="button"
+        class="btn btn-primary dropdown-toggle"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Manage Recipe
       </button>
       <ul class="dropdown-menu">
-        <li><a href="#">To Shopping List</a></li>
-        <li><a href="#">Delete Recipe</a></li>
+        <li><a class="dropdown-item" href="#">To Shopping List</a></li>
+        <li><a class="dropdown-item" href="#">Delete Recipe</a></li>
       </ul>
     </div>
   </div>
 </div>
-<div class="row">
-  <div class="col-xs-12">Description</div>
-</div>
+
 <div class="row">
   <div class="col-xs-12">Ingredients</div>
 </div>
+
+<ng-template #name>
+  <h2>Please select a recipe!</h2>
+</ng-template>
